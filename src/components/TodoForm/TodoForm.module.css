@@ -1,0 +1,52 @@
+.form {
+  margin: 25px 0 55px 0;
+  position: relative;
+}
+
+.todoInputWrapper {
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #e3e4f1;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.todoInput {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 18px;
+  color: #494c6b;
+  background: transparent;
+  font-family: inherit;
+}
+
+.error {
+  position: absolute;
+  bottom: -30px;
+  color: red;
+  background: #57ddff;
+  padding: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.clearBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  color: #9495a5;
+}
+
+/*# sourceMappingURL=TodoForm.module.css.map */

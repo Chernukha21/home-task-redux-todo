@@ -1,0 +1,28 @@
+.todoList {
+  width: 500px;
+  height: auto;
+  min-height: 500px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.filtersWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  color: #9495a5;
+}
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.search {
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  color: #9495a5;
+  padding: 5px;
+  border-radius: 5px;
+}

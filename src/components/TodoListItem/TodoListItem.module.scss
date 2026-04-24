@@ -1,0 +1,86 @@
+$gradient: linear-gradient(135deg, #57ddff 0%, #c058f3 100%);
+$text-completed: #d1d2da;
+$border-color: #e3e4f1;
+
+.todoListItem {
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  background: #fff;
+  border-radius: 5px;
+  border-bottom: 1px solid $border-color;
+  transition: all 0.3s ease;
+  .check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid transparent;
+      background: $gradient;
+    }
+  }
+
+  .value {
+    font-size: 18px;
+    color: #494c6b;
+    transition: color 0.3s ease;
+    flex: 1;
+  }
+}
+
+.completed {
+  .check {
+    background: $gradient;
+    border: none;
+  }
+
+  .icon {
+    width: 6px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+  }
+
+  .value {
+    color: $text-completed;
+    text-decoration: line-through;
+  }
+}
+.deleteBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: #494c6b;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.todoListItem:hover .deleteBtn {
+  opacity: 1;
+}
+.overdue {
+  .value {
+    color: red;
+  }
+}
+.editInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+}
+.editIconStyle {
+  width: 20px;
+  height: 20px;
+}

@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux";
 import {deleteTodo, editTodo, toggleIsDone} from "../../store/todoListSlice.js";
 import {useState} from "react";
 import  editIcon  from "../../assets/edit_icon.svg?react";
+import classNames from "classnames";
 
 const TodoListItem = ({ id, isDone, value, isOverdue  }) => {
     const dispatch = useDispatch();
@@ -51,12 +52,14 @@ const TodoListItem = ({ id, isDone, value, isOverdue  }) => {
 
     const canShowEditButton = !isDone && !isOverdue && !isEditing;
 
+    const stateClasses = classNames(classes.todoListItem, {
+        [classes.completed]: isDone,
+        [classes.overdue]: isOverdue,
+    });
+
     return (
         <div
-            className={`${classes.todoListItem}
-                        ${isDone ? classes.completed : ''}
-                        ${isOverdue ? classes.overdue : ''}
-                      `}
+            className={stateClasses}
         >
             <div className={classes.check} onClick={toggleTodoHandler}>
                 {isDone && <span className={classes.icon} />}

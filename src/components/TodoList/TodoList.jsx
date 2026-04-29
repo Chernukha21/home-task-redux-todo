@@ -1,8 +1,8 @@
-import classes from './TodoList.module.scss';
 import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import classes from './TodoList.module.scss';
 import TodoListItem from "../TodoListItem/TodoListItem.jsx";
 import {clearCompleted, setFilter, updateOverdueTodos, setSearch} from "../../store/todoListSlice.js";
-import {useEffect} from "react";
 
 const TodoList = () => {
     const dispatch = useDispatch();
@@ -59,14 +59,14 @@ const TodoList = () => {
                     <div>{itemsLeft} items left</div>
 
                     <div className={classes.filters}>
-                        <p onClick={() => dispatch(setFilter('all'))}>All</p>
-                        <p onClick={() => dispatch(setFilter('active'))}>Active</p>
-                        <p onClick={() => dispatch(setFilter('completed'))}>Completed</p>
+                        <button onClick={() => dispatch(setFilter('all'))}>All</button>
+                        <button onClick={() => dispatch(setFilter('active'))}>Active</button>
+                        <button onClick={() => dispatch(setFilter('completed'))}>Completed</button>
                     </div>
 
-                    <div onClick={() => dispatch(clearCompleted())}>
+                    <button onClick={() => dispatch(clearCompleted())}>
                         Clear Completed
-                    </div>
+                    </button>
                 </div>
             </div>
         </>

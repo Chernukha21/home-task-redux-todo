@@ -13,11 +13,30 @@
   padding: 15px 20px;
   color: #9495a5;
 }
+.filtersWrapper button {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  color: #9495a5;
+  padding: 0;
+  font-size: 16px;
+}
+.filtersWrapper > button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 .filters {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.filters > * {
+  cursor: pointer;
+}
+.filters > *:hover {
+  text-decoration: underline;
 }
 
 .search {

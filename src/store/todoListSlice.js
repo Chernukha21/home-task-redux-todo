@@ -43,10 +43,11 @@ const todoListSlice = createSlice({
             state.todos = state.todos.filter(todo => !todo.isDone);
         },
         editTodo: (state, action) => {
-            const todo = state.todos.find(todo => todo.id === action.payload.id);
+            const { id, value } = action.payload;
+            const todo = state.todos.find(todo => todo.id === id);
 
             if (todo) {
-                todo.value = action.payload.value;
+                todo.value = value;
             }
         },
         updateOverdueTodos: (state) => {

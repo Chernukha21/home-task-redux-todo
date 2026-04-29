@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../../store/todoListSlice.js';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { validationTodoSchema } from '../../../schemas/todoSchema.js';
+import { validationTodoSchema } from '../../schemas/todoSchema.js';
 import classes from './TodoForm.module.scss';
 
 const TodoForm = () => {
